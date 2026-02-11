@@ -35,36 +35,24 @@ export default function FAQ() {
 
   const faqItems = [
     {
-      question: "Gdzie śpimy?",
-      answer: "Goście weselni mają wykupiony nocleg wraz ze śniadaniem w Hotelu Campanille Warszawa Północ, zameldowanie od godziny 14:00 - 15.08.2026 oraz wymeldowanie o godzinie 12:00 - 16.08.2026"
+      question: "Jak dojechać na miejsce imprezy?",
+      answer: "Najlepiej jak wszyscy będą jechać za Nami."
     },
     {
-      question: "Czy w hotelu znajduje się bar?",
-      answer: "Oczywiście! Bar jest otwarty - można tam zrobić mały \"before\"."
+      question: "Czy będzie nocleg?",
+      answer: "Tak, prosimy jednak o jak najszybszą decyzję kto będzie korzystał z noclegu:)"
     },
     {
-      question: "Czy będzie transport?",
-      answer: "Tak, będzie zapewniony transport. Goście zostawiają swoje auta pod salą weselną, a w nocy będą organizowane transfery, które przewiozą wszystkich do hotelu. Następnego dnia, po wymeldowaniu, będzie czekał transport powrotny, który podwiezie gości pod salę, do ich samochodów."
+      question: "Gdzie i kiedy będzie można złożyć życzenia?",
+      answer: "Według Nas najlepszym rozwiązaniem będzie już na miejscu, na sali."
     },
     {
-      question: "O której godzinie zaczyna się ślub?",
-      answer: "16:30"
+      question: "Czy są poprawiny?",
+      answer: "Oczywiście. Natomiast prosimy wszystkich, aby potwierdzili swoją obecność drugiego dnia, najszybciej jak się da :)"
     },
     {
-      question: "Jak potwierdzić obecność?",
-      answer: "Na tej stronie znajduje się specjalny formularz, w którym możecie potwierdzić swoją obecność, wskazać preferencje dotyczące diety oraz zaznaczyć, czy będziecie korzystać z noclegu"
-    },
-    {
-      question: "Co z prezentami?",
-      answer: "Sam fakt, że będziecie z nami w tym dniu, to dla nas najpiękniejszy prezent. Jeśli jednak chcielibyście coś podarować, delikatnie podpowiadamy, że marzenia najłatwiej spełnia się w kopercie ❤️"
-    },
-    {
-      question: "Czy trzeba mieć wygodne buty?",
-      answer: "Zdecydowanie tak! Szpilki piękne, ale parkiet długi - więc warto mieć coś na zmianę, jeśli planujecie tańczyć do rana!"
-    },
-    {
-      question: "O której kończy się wesele?",
-      answer: "A kto by to wiedział! Jak tylko skończy się zabawa na sali, Młodzi zapraszają chętnych na after na glampingu"
+      question: "Czy będzie transfer sala-> hotel?",
+      answer: "Tak,przewidujemy :)"
     }
   ];
 

@@ -35,8 +35,8 @@ export default function Kontakt() {
                 <div className="flex items-center space-x-6">
                   <PhoneIcon className="h-8 w-8 text-black flex-shrink-0" />
                   <div>
-                    <h3 className="text-2xl font-serif mb-2">Klaudia</h3>
-                    <p className="text-lg text-black">500 806 828</p>
+                    <h3 className="text-2xl font-serif mb-2">Paula </h3>
+                    <p className="text-lg text-black">735 958 037</p>
                   </div>
                 </div>
               </div>
@@ -46,8 +46,8 @@ export default function Kontakt() {
                 <div className="flex items-center space-x-6">
                   <PhoneIcon className="h-8 w-8 text-black flex-shrink-0" />
                   <div>
-                    <h3 className="text-2xl font-serif mb-2">Darek </h3>
-                    <p className="text-lg text-black">604 470 402</p>
+                    <h3 className="text-2xl font-serif mb-2">Przemek</h3>
+                    <p className="text-lg text-black">604 799 522</p>
                   </div>
                 </div>
               </div>

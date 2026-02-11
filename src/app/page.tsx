@@ -11,7 +11,9 @@ import Nocleg from "./components/Nocleg";
 import FAQ from "./components/FAQ";
 import Cytat from "./components/Cytat";
 import Dysk from "./components/Dysk";
-
+import Kosmetyczki from "./components/Kosmetyczki";
+import Muzyka
+ from "./components/Muzyka";
 export default function Page() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
@@ -26,7 +28,9 @@ export default function Page() {
       <DataMiejsce />
       <Nocleg />
       <RSVP />
-      <Dysk bucketName={"klaudia-darek"} galleryLink={"https://dysk.weddingly.pl/galeria_klaudia-darek"} workerClientName={"klaudia_darek"} />
+      <Kosmetyczki />
+      <Muzyka />
+      <Dysk bucketName={"paula-przemek"} galleryLink={"https://dysk.weddingly.pl/galeria_paula-przemek"} workerClientName={"paula_przemek"} />
       <Kontakt />
       <FAQ />
     </>

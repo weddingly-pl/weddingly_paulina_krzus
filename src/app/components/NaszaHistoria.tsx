@@ -10,13 +10,14 @@ export default function Info_1() {
         <div className="w-full md:w-1/2 md:text-center md:mr-16">
           <h2 className="text-4xl md:text-5xl font-serif mb-6 text-center md:text-center">Nasza Historia</h2>
           <p className="text-lg md:text-lg text-gray-600 mb-12 leading-relaxed text-center">
-            Poznaliśmy się na weselu wspólnego przyjaciela latem 2019 roku. Klaudia pracowała wtedy jako projektantka graficzna, 
-            a Darek był właśnie po zmianach jako strażak. Przypadkiem siedzialiśmy obok siebie przy stole i cały wieczór rozmawiali­śmy 
-            o podróżach, filmach i marzeniach. Po imprezie Darek miał odwagę poprosić ją o numer telefonu - mimo że był trochę zdenerwowany. 
-            Pierwsza randka była w ulubionej kawiarni Klaudii, gdzie spędzili siedem godzin, nie zauważając czasu. Od tego momentu byliśmy nierozłączni. 
-            Przez lata przeżyliśmy razem wiele przygód: wspólne podróże, budowanie domu, zbieranie umiejętności (Klaudia nauczyła Darka gotować, 
-            a on nauczył ją łowić ryby). 15 marca 2024 roku Darek zaproponował na szczycie Tatr - oświadczyny były dokonane przy zachodzie słońca, 
-            z pierścionkiem, który Klaudia nosiła w sercu. Teraz, 15 sierpnia 2026, oficjalnie zostajemy mężem i żoną.
+            Jest jesienny wieczor, 1szy Listopad 2020 roku. Tak … to właśnie tego wieczoru się poznali, dzięki znajomym ,którzy bardziej tego chcieli niż Oni sami! 
+            On - Przemek lat 28 ,ostoja spokoju,analityczny umysł ,który wszystko musi przemyśleć i poukładać , domator,wrażliwa dusza  . Dobry człowiek - tak o Nim mówią . Pracoholik- bez pracy żyć nie umie 
+            Ona - Paula lat 30 , z jednej strony (tej imprezowej ) wulkan energii , ogień ,pomysłów milion na minutę ,dusza towarzystwa,ale z drugiej stąpająca twardo po ziemii, bez zawahania dążąca do swoich celow. 
+            Oboje po trudnych związkach, ale być może potrzebnych. 
+            Gdyby nie ich wspólni znajomi , nie znali by się pewnie do dzis :) a dzis ….
+            Są wdzięczni za wszystko,co razem stworzyli,a najbardziej za to ze są szczęśliwymi rodzicami wspaniałych dzieci Noemi i Nikodema , którzy są dowodem ich wspaniałej i pięknej miłości 
+            <br />
+            Dziś to już opowieść której bohaterów jest więcej niż dwoje … RODZINA !
           </p>
         </div>
 
@@ -24,7 +25,7 @@ export default function Info_1() {
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
           <div className="relative w-full aspect-[3/4] rounded-t-full overflow-hidden">
             <Image
-              src="/images/ZDJĘCIE5 - Klaudia.jpg"
+              src="/images/1770576572839-IMG_0002.jpeg"
               alt="Wedding couple"
               fill
               className="w-full h-full object-cover"

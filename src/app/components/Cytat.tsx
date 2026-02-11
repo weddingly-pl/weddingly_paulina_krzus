@@ -27,7 +27,7 @@ export default function LoveQuote() {
           marginTop: "20px",
         }}
       >
-        "After all this time? Always"
+        „Dwoje ludzi spotyka się przypadkiem, a okazuje się, że czekali na siebie całe życie”.– Lima Barreto, O’ Cangaceiro"
       </p>
 
     </section>

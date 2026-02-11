@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0 w-full h-full">
         <picture>
           <Image
-              src="/images/ZDJĘCIE88 - Klaudia.jpg"
+              src="/images/1770576575337-IMG_0001.jpeg"
               alt="Wedding background"
               fill
               sizes="100vw"
