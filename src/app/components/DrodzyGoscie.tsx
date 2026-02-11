@@ -35,7 +35,7 @@ export default function DrodzyGoscie() {
         <div className="w-full md:w-1/2 mb-8 md:mb-0 md:mr-16">
           <div className="relative w-full aspect-[3/4] rounded-t-full overflow-hidden">
             <Image
-              src="/images/ZDJĘCIE4 - Klaudia.jpg"
+              src="/images/1770576575337-IMG_0001.jpeg"
               alt="Wedding couple"
               fill
               className="w-full h-full object-cover"

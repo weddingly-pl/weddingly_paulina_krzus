@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0 w-full h-full">
         <picture>
           <Image
-              src="/images/1770576575337-IMG_0001.jpeg"
+              src="/images/1770576572839-IMG_0002.jpeg"
               alt="Wedding background"
               fill
               sizes="100vw"
@@ -36,7 +36,7 @@ export default function Hero() {
           </p>
         </div>
         <h1 className="text-6xl md:text-8xl font-serif mb-10 tracking-wide drop-shadow-lg animate-slideUp">
-          Klaudia & Darek
+          Paulina & Przemek
         </h1>
 
         {/* Wedding Details Grid */}

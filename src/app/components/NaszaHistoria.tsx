@@ -35,7 +35,7 @@ export default function Info_1() {
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
           <div className="relative w-full aspect-[3/4] rounded-t-full overflow-hidden">
             <Image
-              src="/images/1770576572839-IMG_0002.jpeg"
+              src="/images/1770576572839-IMG_0003.jpg"
               alt="Wedding couple"
               fill
               className="w-full h-full object-cover"

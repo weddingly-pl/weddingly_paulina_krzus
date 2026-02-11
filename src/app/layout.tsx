@@ -4,8 +4,8 @@ import Script from 'next/script'
 import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
-  title: 'Weddingly - Klaudia i Darek',
-  description: 'Strona ślubna Klaudii i Darka',
+  title: 'Weddingly - Paulina i Przemek',
+  description: 'Strona ślubna Pauliny i Przemka',
 };
 
 export default function RootLayout({
