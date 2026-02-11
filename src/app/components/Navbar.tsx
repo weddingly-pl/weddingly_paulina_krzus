@@ -66,7 +66,7 @@ export default function Navbar({ isDrawerOpen, setIsDrawerOpen }: NavbarProps) {
             width={32}
             height={32}
           />
-          K & D
+          P & P
         </Link>
 
         {/* Desktop Menu */}

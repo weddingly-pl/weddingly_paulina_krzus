@@ -45,7 +45,7 @@ export default function Hero() {
             <CalendarDaysIcon className="h-6 w-6 md:h-7 md:w-7 text-white" />
             <div>
               <h3 className="text-sm md:text-base font-semibold mb-1 text-white">Data</h3>
-              <p className="text-xs md:text-sm text-white">15 sierpnia 2026</p>
+              <p className="text-xs md:text-sm text-white">12 września 2026</p>
             </div>
           </div>
 
@@ -53,7 +53,7 @@ export default function Hero() {
             <ClockIcon className="h-6 w-6 md:h-7 md:w-7 text-white" />
             <div>
               <h3 className="text-sm md:text-base font-semibold mb-1 text-white">Godzina</h3>
-              <p className="text-xs md:text-sm text-white">16:30</p>
+              <p className="text-xs md:text-sm text-white">16:00</p>
             </div>
           </div>
 
@@ -61,7 +61,7 @@ export default function Hero() {
             <MapPinIcon className="h-6 w-6 md:h-7 md:w-7 text-white" />
             <div>
               <h3 className="text-sm md:text-base font-semibold mb-1 text-white">Ślub</h3>
-              <p className="text-xs md:text-sm text-white">Parafia Matki Bożej Królowej Polski Marki-Pustelnik - Jutrzenki 26, 05-270 Marki</p>
+              <p className="text-xs md:text-sm text-white">Kościół Matki Bożej Różańcowej w Strzelcach Kraj</p>
             </div>
           </div>
 
@@ -69,7 +69,7 @@ export default function Hero() {
             <MapPinIcon className="h-6 w-6 md:h-7 md:w-7 text-white" />
             <div>
               <h3 className="text-sm md:text-base font-semibold mb-1 text-white">Wesele</h3>
-              <p className="text-xs md:text-sm text-white">Cicha 23, 05-270 Marki</p>
+              <p className="text-xs md:text-sm text-white">Pod wiatrakami - Golice woj. lubuskie</p>
             </div>
           </div>
         </div>

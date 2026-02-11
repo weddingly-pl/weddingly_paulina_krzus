@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Muzyka() {
   return (
-    <section className="py-24 bg-[var(--background-color)]">
+    <section className="py-2 bg-[var(--background-color)]">
       <div className="container mx-auto px-12 md:px-24">
         {/* Section Header */}
         <div className="text-center mb-16">

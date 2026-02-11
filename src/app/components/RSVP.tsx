@@ -4,18 +4,16 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 interface AdditionalGuest {
   name: string;
-  diet: string;
 }
 
 export default function RSVP() {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
     guests: '1',
     attendance: 'tak',
-    diet: 'standard',
-    accommodation: 'nie',
-    afterparty: 'nie',
+    nocleg: 'nie',
+    weddingAfterparty: 'nie',
+    transfer: 'nie',
     message: ''
   });
   const [additionalGuests, setAdditionalGuests] = useState<AdditionalGuest[]>([]);
@@ -32,8 +30,7 @@ export default function RSVP() {
         .map((_, index) => {
           return (
             additionalGuests[index] || {
-              name: `${formData.name} (os.${index + 2})`,
-              diet: 'standard',
+              name: `${formData.name} (os.${index + 2})`
             }
           );
         });
@@ -56,7 +53,7 @@ export default function RSVP() {
     const submissionData = { ...formData, additionalGuests };
     try {
       await fetch(
-        'https://script.google.com/macros/s/AKfycbwzi5uTljNiolDsveLqqnTln965hrCOB4E9s-v6PC35LBnCJ0nIskgFGLOTdzH8VqBVWA/exec',
+        'https://script.google.com/macros/s/AKfycbwy2cspxCu4yGTMWB16nrw5ngfDaf8o0gP9pikpajqUHdP6Q07KmetBjGaid4kNcAYO/exec',
         {
           method: 'POST',
           mode: 'no-cors',
@@ -110,7 +107,7 @@ export default function RSVP() {
           <h2 className="text-4xl md:text-5xl font-serif mb-6">Potwierdź obecność</h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
             Bardzo zależy nam na tym, abyście byli z nami w tym wyjątkowym dniu. 
-            Prosimy, abyście potwierdzili swoją obecność do 29 lipca 2026 roku.
+            Prosimy, abyście potwierdzili swoją obecność do 12 sierpnia 2026 roku.
           </p>
         </div>
 
@@ -129,46 +126,85 @@ export default function RSVP() {
               />
             </div>
 
-            {/* Afterparty */}
+            {/* Nocleg */}
             <div>
               <label className="block text-lg font-serif mb-2">Czy korzystasz z noclegu?</label>
               <div className="flex items-center space-x-6">
                 <label className="flex items-center space-x-2">
                   <input
                     type="radio"
-                    name="afterparty"
+                    name="nocleg"
                     value="tak"
-                    checked={formData.afterparty === "tak"}
-                    onChange={(e) => setFormData({ ...formData, afterparty: e.target.value })}
+                    checked={formData.nocleg === "tak"}
+                    onChange={(e) => setFormData({ ...formData, nocleg: e.target.value })}
                   />
                   <span>Tak</span>
                 </label>
                 <label className="flex items-center space-x-2">
                   <input
                     type="radio"
-                    name="afterparty"
+                    name="nocleg"
                     value="nie"
-                    checked={formData.afterparty === "nie"}
-                    onChange={(e) => setFormData({ ...formData, afterparty: e.target.value })}
+                    checked={formData.nocleg === "nie"}
+                    onChange={(e) => setFormData({ ...formData, nocleg: e.target.value })}
                   />
                   <span>Nie</span>
                 </label>
               </div>
             </div>
 
-            {/* Dieta */}
-            <div className="relative">
-              <label htmlFor="diet" className="block text-lg font-serif mb-2">Preferencje żywieniowe</label>
-              <select
-                id="diet"
-                className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#003E3C] appearance-none pr-10"
-                value={formData.diet}
-                onChange={(e) => setFormData({ ...formData, diet: e.target.value })}
-              >
-                <option value="standard">Standard</option>
-                <option value="wege">Wegetariańskie</option>
-              </select>
-              <ChevronDownIcon className="h-5 w-5 absolute right-3 top-[70%] transform -translate-y-1/2 pointer-events-none text-gray-500" />
+            {/* Obecność na poprawinach */}
+            <div>
+              <label className="block text-lg font-serif mb-2">Obecność na poprawinach</label>
+              <div className="flex items-center space-x-6">
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="weddingAfterparty"
+                    value="tak"
+                    checked={formData.weddingAfterparty === "tak"}
+                    onChange={(e) => setFormData({ ...formData, weddingAfterparty: e.target.value })}
+                  />
+                  <span>Tak</span>
+                </label>
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="weddingAfterparty"
+                    value="nie"
+                    checked={formData.weddingAfterparty === "nie"}
+                    onChange={(e) => setFormData({ ...formData, weddingAfterparty: e.target.value })}
+                  />
+                  <span>Nie</span>
+                </label>
+              </div>
+            </div>
+
+            {/* Transfer sala -> hotel */}
+            <div>
+              <label className="block text-lg font-serif mb-2">Czy chcesz skorzystać z transferu sala → hotel?</label>
+              <div className="flex items-center space-x-6">
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="transfer"
+                    value="tak"
+                    checked={formData.transfer === "tak"}
+                    onChange={(e) => setFormData({ ...formData, transfer: e.target.value })}
+                  />
+                  <span>Tak</span>
+                </label>
+                <label className="flex items-center space-x-2">
+                  <input
+                    type="radio"
+                    name="transfer"
+                    value="nie"
+                    checked={formData.transfer === "nie"}
+                    onChange={(e) => setFormData({ ...formData, transfer: e.target.value })}
+                  />
+                  <span>Nie</span>
+                </label>
+              </div>
             </div>
 
             {/* Liczba gości */}
@@ -205,18 +241,6 @@ export default function RSVP() {
                         value={guest.name}
                         onChange={(e) => handleAdditionalGuestChange(index, 'name', e.target.value)}
                       />
-                    </div>
-                    <div className="relative">
-                      <label className="block text-lg font-serif mb-2">Preferencje żywieniowe</label>
-                      <select
-                        className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#003E3C] appearance-none pr-10"
-                        value={guest.diet}
-                        onChange={(e) => handleAdditionalGuestChange(index, 'diet', e.target.value)}
-                      >
-                        <option value="standard">Standard</option>
-                        <option value="wege">Wegetariańskie</option>
-                      </select>
-                      <ChevronDownIcon className="h-5 w-5 absolute right-3 top-[70%] transform -translate-y-1/2 pointer-events-none text-gray-500" />
                     </div>
                   </div>
                 ))}
