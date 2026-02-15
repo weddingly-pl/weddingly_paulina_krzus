@@ -53,7 +53,7 @@ export default function Hero() {
             <ClockIcon className="h-6 w-6 md:h-7 md:w-7 text-white" />
             <div>
               <h3 className="text-sm md:text-base font-semibold mb-1 text-white">Godzina</h3>
-              <p className="text-xs md:text-sm text-white">16:00</p>
+              <p className="text-xs md:text-sm text-white">14:00</p>
             </div>
           </div>
 

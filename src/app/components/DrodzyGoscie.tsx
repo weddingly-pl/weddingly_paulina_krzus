@@ -11,7 +11,7 @@ export default function DrodzyGoscie() {
   });
 
   useEffect(() => {
-    const weddingDate = new Date('2026-09-12T16:00:00').getTime();
+    const weddingDate = new Date('2026-09-12T14:00:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
