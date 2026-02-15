@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="absolute inset-0 w-full h-full">
         <picture>
           <Image
-              src="/images/1770576572839-IMG_0002.jpeg"
+              src="/images/1770976468799-2A9BDD78-FD53-4E95-B663-37798A439C96.png"
               alt="Wedding background"
               fill
               sizes="100vw"
@@ -18,8 +18,8 @@ export default function Hero() {
               priority
               className="
                 object-cover 
-                object-[55%_90%]   // mobile: mega w lewo
-                md:object-[10%_10%] // od md w górę: środek
+                object-[55%_0%]   // mobile: mega w lewo
+                md:object-[10%_21%] // od md w górę: środek
                 brightness-[0.85] 
                 transition-all duration-700
               "

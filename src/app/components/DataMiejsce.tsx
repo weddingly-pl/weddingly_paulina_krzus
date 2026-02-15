@@ -52,7 +52,7 @@ export default function DataMiejsce() {
           <div className="space-y-4 md:space-y-6">
             <div className="text-center">
               <h3 className="text-2xl md:text-3xl font-serif mb-2 md:mb-3">Ślub</h3>
-              <p className="text-lg md:text-xl text-gray-600 font-serif">Kościół Matki Bożej Różańcowej w Strzelcach Kraj</p>
+              <p className="text-lg md:text-xl text-gray-600 font-serif">Kościół Matki Bożej Różańcowej <br /> w Strzelcach Kraj</p>
             </div>
             <div className="w-full rounded-2xl overflow-hidden shadow-xl border border-gray-100">
               <iframe 

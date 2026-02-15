@@ -11,7 +11,7 @@ export default function Kontakt() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif mb-6">Kontakt</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Jeśli macie jakiekolwiek pytania, jesteśmy do Waszej dyspozycji
+            Jeśli macie jakiekolwiek pytania, jesteśmy do Waszej dyspozycji.
           </p>
         </div>
 
@@ -20,7 +20,7 @@ export default function Kontakt() {
           {/* Image Section */}
           <div className="relative w-full aspect-[3/4] rounded-t-full overflow-hidden">
             <Image
-              src="/images/1770576575337-IMG_0001.jpeg"
+              src="/images/1770976469640-FEFA124C-8C70-4C38-8E3C-937E524850AD.png"
               alt="Para Młoda kontakt"
               fill
               className="w-full h-full object-cover"
