@@ -213,6 +213,11 @@ export default function Dysk({
     setIsUploading(true);
     await keepScreenAwake(true);
 
+    const defaultThumbnailWidth = process.env.NEXT_PUBLIC_THUMBNAIL_WIDTH ? parseInt(process.env.NEXT_PUBLIC_THUMBNAIL_WIDTH, 10) : 350;
+    const defaultThumbnailFormat = (process.env.NEXT_PUBLIC_THUMBNAIL_FORMAT || "webp") as "webp" | "jpeg";
+
+    const uploadedImages: Array<{ bucket: string; originalKey: string; width?: number; format?: "webp" | "jpeg" }> = [];
+
     for (const file of pending) {
       setUploadStatuses(prev => ({
         ...prev,
@@ -254,6 +259,16 @@ export default function Dysk({
               })),
           });
 
+          // Zbierz obrazy do batch thumbnail generacji
+          if (isImage(file)) {
+            uploadedImages.push({
+              bucket: bucketName.replace(/_/g, "-"),
+              originalKey: key,
+              width: defaultThumbnailWidth,
+              format: defaultThumbnailFormat,
+            });
+          }
+
           setUploadStatuses(prev => ({
             ...prev,
             [file.name]: { ...prev[file.name], status: "success", progress: 100 },
@@ -289,6 +304,27 @@ export default function Dysk({
         `Część plików nie udało się wysłać.${last?.errorMessage ? ` Szczegóły: ${last.errorMessage}` : ""} ` +
         `Usuń listę i wybierz pliki ponownie.`
       );
+    } else if (uploadedImages.length > 0) {
+      // Wysłanie batch thumbnail request na koniec (przez nasz API route)
+      try {
+        console.log(`[THUMBNAIL] Wysyłanie ${uploadedImages.length} obrazów...`, uploadedImages);
+
+        const response = await fetch('/api/batch-thumbnail', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ images: uploadedImages }),
+        });
+
+        if (response.status === 202) {
+          const result = await response.json();
+          console.log(`[THUMBNAIL] Batch zaakceptowany - jobId:`, result.jobId);
+        } else {
+          const result = await response.json();
+          console.warn(`[THUMBNAIL] API zwróciło status ${response.status}:`, result);
+        }
+      } catch (e) {
+        console.warn("[THUMBNAIL] Wysyłanie batch thumbnail nie powiodło się:", e);
+      }
     }
 
     setIsUploading(false);

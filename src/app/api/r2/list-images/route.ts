@@ -1,7 +1,7 @@
 // pages/api/list-images.ts
 import { NextRequest, NextResponse } from "next/server";
 import { S3Client, ListObjectsV2Command } from "@aws-sdk/client-s3";
-import { bucketMap } from "@/lib/bucketMap"; // importujemy mapę
+import { bucketMap, getSubfolder } from "@/lib/bucketMap";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
@@ -22,13 +22,29 @@ export async function GET(req: NextRequest) {
   });
 
   try {
-    const data = await s3.send(new ListObjectsV2Command({ Bucket: bucket.bucket }));
+    // Oblicz subfolder z client name
+    const subfolder = getSubfolder(client);
+    const prefix = `${subfolder}/`;
+    
+    const data = await s3.send(new ListObjectsV2Command({ 
+      Bucket: bucket.bucket,
+      Prefix: prefix,
+    }));
     const items = data.Contents || [];
 
-    const images = items.map(item => ({
-      key: item.Key!,
-      url: `${bucket.endpoint}/${item.Key!}`,
-    }));
+    const images = items
+      .filter(item => {
+        // Pomijaj folder sam w sobie (Keys zwracają obiekty, a nie foldery)
+        return item.Key !== prefix;
+      })
+      .map(item => {
+        // Zwracamy pełną ścieżkę (z subfolderem) dla public URL
+        return {
+          key: item.Key!,
+          displayKey: item.Key!.split("/").pop() || item.Key!,
+          url: `${bucket.endpoint}/${item.Key!}`,
+        };
+      });
 
     return NextResponse.json({ images });
   } catch (err: any) {

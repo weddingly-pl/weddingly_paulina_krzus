@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
-import { bucketMap } from "@/lib/bucketMap"; // importujemy mapę
+import { bucketMap, getSubfolder } from "@/lib/bucketMap";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
@@ -32,9 +32,10 @@ export async function GET(req: NextRequest) {
   forcePathStyle: true,
 });
 
+    const subfolder = getSubfolder(client);
     const command = new PutObjectCommand({
       Bucket: cred.bucket,
-      Key: file,
+      Key: `${subfolder}/${file}`,
       ContentType: type,
     });
 
